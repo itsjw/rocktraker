@@ -1,12 +1,28 @@
+import 'zone.js/dist/zone-mix';
+import 'reflect-metadata';
+import 'polyfills';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
-import { AppComponent } from './app.component';
-import {TopBarModule} from './components/top-bar/top-bar.module';
-import {SideRankModule} from './components/side-rank/side-rank.module';
-import { DataService } from './data.service';
-import { TabPlayersModule } from './components/tab-players/tab-players.module';
+import { FormsModule } from '@angular/forms';
 
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
+
+// NG Translate
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+import { ElectronService } from './providers/electron.service';
+
+import { AppComponent } from './app.component';
+import { HomeModule } from 'app/components/home/home.module';
+
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -14,12 +30,19 @@ import { TabPlayersModule } from './components/tab-players/tab-players.module';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    TopBarModule,
-    SideRankModule,
-    TabPlayersModule
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    HomeModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (HttpLoaderFactory),
+        deps: [HttpClient]
+      }
+    })
   ],
-  providers: [DataService],
+  providers: [ElectronService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

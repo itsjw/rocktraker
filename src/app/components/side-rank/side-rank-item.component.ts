@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { RankedItem } from '../../data.model';
+import { RankedItem } from 'app/models/data.model';
 
 
 @Component({

@@ -3,7 +3,7 @@ import { Http,RequestOptions,Headers, URLSearchParams, Response } from '@angular
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Observable';
-import { Player, PlayerRequest } from './data.model';
+import { Player, PlayerRequest } from 'app/models/data.model';
 
 @Injectable()
 export class DataService {
@@ -47,9 +47,4 @@ export class DataService {
   }
   
   handleError(error: any) { return Observable.throw(error); }
-
-  myData() {
-    return 'This is my data, man!';
-  }
-
 }
