@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { Player } from '../../data.model';
+import { Player } from 'app/models/data.model';
 
 
 @Component({
