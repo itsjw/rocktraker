@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #29292b;
+}
+
+.divider {
+    display: flex;
+    flex-grow: 0;
+    border: groove #484846;
+    border-width: 2px 0 0 2px;
+    margin-left: -2px;
+}
+
+
+.section-title{
+    padding: 10px;
+    background: #212121;
+    margin-left: -2px;
+}
+
+.section-title h4{
+    margin: 0;
+}
+
+*:not(.fa){
+    color: #eee;
+}
+
+i.fa{
+    margin-right: 3px;
+}
+
+.up{
+    color: green;
+}
+
+.down{
+    color: red;
+}

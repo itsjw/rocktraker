@@ -1,0 +1,11 @@
+<div class="btn-group-player">
+    <div *ngFor="let player of players">
+        <div class="btn-player" 
+            [ngClass]="{'active': player === playerSeleted}" 
+            (click)="handleSeletion(player)" 
+        >
+            <img [src]="player.avatar" alt="Avatar">
+            <span>{{player.displayName}}</span>
+        </div>
+    </div>
+</div>

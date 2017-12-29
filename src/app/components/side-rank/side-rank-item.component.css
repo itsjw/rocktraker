@@ -1,0 +1,46 @@
+h3, h4, p{
+    margin: 1px 0;
+}
+
+
+.item .details{
+    text-align: center;    
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.details{
+    flex-direction: row;
+}
+
+.item, 
+.points,
+.item .ranked{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.item .details .title{
+    font-size: 20px;
+}
+.item .details .ranked{
+    font-size: 16px;
+    color: gray;
+}
+
+.item div.ranked div:first-child{
+    margin-right: 20px;
+}
+
+
+.points > div.current{
+    margin: 0px 20px;
+}
+
+
+.img img{
+    height:80px;
+    margin-left: -15px;
+}
+

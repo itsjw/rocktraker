@@ -1,0 +1,35 @@
+.btn-group-player{
+    float: left;
+}
+.btn-group-player > div{
+    float: left;
+}
+
+
+.btn-player{
+    background-color: rgba(63,105,215,.3);
+    cursor: pointer;
+    display: flex;
+    padding: 5px 10px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: #999;
+    text-decoration: none;
+}
+
+.btn-player img{
+    border-radius: 50%;
+    height: 30px;
+    margin-right: 5px;
+}
+.btn-player span{
+    line-height: 1.6;
+    font-size:large;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-player:hover, .btn-player.active{
+    background-color: rgba(63,105,215,.6);
+}

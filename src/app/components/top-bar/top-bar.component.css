@@ -1,0 +1,55 @@
+header {
+    background: #212121;
+    color: rgb(219, 216, 216);
+    display: flex;
+    flex-grow: 1;    
+    -webkit-app-region: drag;
+    cursor: pointer;
+}
+
+header div{
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    
+
+}
+
+header .header-title{
+    padding: 5px;
+    height: 50px;
+    flex-grow: 0;
+}
+
+header .header-title .title{
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+header .header-title .logo img{
+    height: 50px;
+    width: 50px;
+}
+
+header .header-menu{
+    flex-grow: 1;
+    flex-direction: row-reverse;
+}
+header .header-menu .menu-option{
+    width: 45px;
+    /* border-left: 1px solid rgba(255, 255, 255, 0.42); */
+    padding: 5px;
+    /* background-color: #000000; */
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 50px;
+    -webkit-app-region: no-drag;
+}
+header .header-menu .menu-option:hover{
+    background-color: #5f2121;
+    cursor: pointer;
+}

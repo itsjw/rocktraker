@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Duel 1v1",
+        "rankIndex": 10
+    },
+    {
+        "title": "Doubles 2v2",
+        "rankIndex": 11
+    },
+    {
+        "title": "Solo Standard 3v3",
+        "rankIndex": 12
+    },
+    {
+        "title": "Standard 3v3",
+        "rankIndex": 13
+    }
+]

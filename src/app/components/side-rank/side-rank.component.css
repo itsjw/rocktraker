@@ -1,0 +1,29 @@
+.side-items{
+    display: block;
+    min-width: 600px;
+}
+
+.side-items .row{
+    display: block;
+    float: left;
+    width: 25%;
+    
+}
+
+.side-items .row > div{
+    display: flex;
+}
+
+@media (max-width:978px){
+    .side-items .row{
+        width: 50%;
+    }
+    
+}
+
+side-rank-item{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px 10px;
+}

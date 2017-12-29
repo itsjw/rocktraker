@@ -1,0 +1,23 @@
+<div class="item">
+    <div class="img"><img [src]="ranked.img"/></div>
+    <div class="details">
+        <div class="title">{{getValue(ranked.title)}}</div>
+        <div class="ranked">
+            <div>{{ getValue(ranked.tierName) }}</div>
+            <div>Division {{ getDivision(ranked.division) }}</div>
+        </div>             
+    </div> 
+</div>
+<div class="points">
+    <div class="down"><i class="fa fa-level-down" aria-hidden="true"></i>{{ getValue(ranked.down) }}</div>
+    <div class="current">
+        {{ getValue(ranked.current) }}
+        <span *ngIf="ranked.dif">
+            (<span  [ngClass]="{
+                'down': ranked.dif < 0,
+                'up': ranked.dif > 0
+            }"  > {{getDif(ranked.dif)}} </span>)
+        </span>
+    </div> 
+    <div class="up"><i class="fa fa-level-up" aria-hidden="true"></i>{{ getValue(ranked.up) }}</div>
+</div>
