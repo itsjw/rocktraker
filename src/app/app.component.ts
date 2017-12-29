@@ -81,6 +81,7 @@ export class AppComponent {
       let tierRange = tier.divisions.find(div => div.id ==rank.division && div.rankIndex === item.rankIndex);
       item.tierName = tier.tierName;
       item.img = tier.img;
+      item.tierId = rank.tier;
       item.division = rank.division;
       item.current = rank.rankPoints;
       if(prevCurrent){

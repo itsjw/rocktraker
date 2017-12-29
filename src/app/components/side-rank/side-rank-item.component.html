@@ -9,7 +9,7 @@
     </div> 
 </div>
 <div class="points">
-    <div class="down"><i class="fa fa-level-down" aria-hidden="true"></i>{{ getValue(ranked.down) }}</div>
+    <div *ngIf="ranked.tierId != 0" class="down"><i class="fa fa-level-down" aria-hidden="true"></i>{{ getValue(ranked.down) }}</div>
     <div class="current">
         {{ getValue(ranked.current) }}
         <span *ngIf="ranked.dif">
@@ -19,5 +19,5 @@
             }"  > {{getDif(ranked.dif)}} </span>)
         </span>
     </div> 
-    <div class="up"><i class="fa fa-level-up" aria-hidden="true"></i>{{ getValue(ranked.up) }}</div>
+    <div *ngIf="ranked.tierId != 0" class="up"><i class="fa fa-level-up" aria-hidden="true"></i>{{ getValue(ranked.up) }}</div>
 </div>

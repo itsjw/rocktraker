@@ -15,6 +15,7 @@ export type RankedItem = {
     title: string;
     rankIndex: number;
     tierName?: string;
+    tierId?: number;
     img: string;
     dif: number;
     division?:number;
