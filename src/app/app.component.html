@@ -1,1 +1,12 @@
-<router-outlet></router-outlet>
+<div class="main-app">
+    <app-header></app-header>
+    <div class="divider"></div>
+    <div [hidden]="loading" class="main-body">
+        <router-outlet></router-outlet>      
+    </div>
+    <div [hidden]="!loading" class="loader-container">
+        <div class="loader-sub-container">
+            <div class="loader"></div>
+        </div>        
+    </div>
+</div>

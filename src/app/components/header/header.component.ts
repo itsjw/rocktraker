@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'top-bar',
-  templateUrl: './top-bar.component.html',
-  styleUrls: ['./top-bar.component.css']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
-export class TopBarComponent {
+export class HeaderComponent {
   logo = 'assets/logo.png';
   title = 'Rocket League';
   subTitle = 'Tracker Network';

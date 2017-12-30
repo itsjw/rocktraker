@@ -29,7 +29,7 @@ export class SideRankItemComponent implements OnInit{
     }else if (val ==1){
       return "II";
     }else if (val ==2){
-      return "II";
+      return "III";
     }else if (val ==3){
       return "IV";
     }else{

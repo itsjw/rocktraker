@@ -1,19 +1,14 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { TierItem, RankedItem } from 'app/models/data.model';
-
+import { Component, Input } from '@angular/core';
+import { TierItem, RankedItem, Player } from 'app/models/data.model';
 
 @Component({
   selector: 'side-rank',
   templateUrl: './side-rank.component.html',
   styleUrls: ['./side-rank.component.css']
 })
-export class SideRankComponent implements OnInit{
-  ngOnInit(): void {
-    if(!(this.ranksItems instanceof Array)){
-      this.ranksItems = [];
-    }    
-   }
-  @Input() ranksItems: RankedItem[];
+export class SideRankComponent{
+
+  @Input() player: Player[];
 
   
 

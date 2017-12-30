@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { TopBarComponent } from './top-bar.component';
+import { HeaderComponent } from './header.component';
 
 @NgModule({
   declarations: [
-    TopBarComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
   ],
   exports: [
-    TopBarComponent
+    HeaderComponent
   ],
   providers: []
 })
-export class TopBarModule { }
+export class HeaderModule { }

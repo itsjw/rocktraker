@@ -1,24 +1,25 @@
 .side-items{
-    display: block;
-    min-width: 600px;
-}
-
-.side-items .row{
-    display: block;
-    float: left;
-    width: 25%;
-    
-}
-
-.side-items .row > div{
     display: flex;
+    width: 100%;
+    min-width: 600px;
+    flex-direction: row;
 }
 
-@media (max-width:978px){
-    .side-items .row{
-        width: 50%;
-    }
+.side-items > div{
+    display: flex;
+    width: 20%;
     
+}
+
+.side-items > div > div{
+    display: block;
+    border: groove #484846;
+    border-width: 0 0 0 2px;
+    width: 100%;
+}
+
+.side-items > div:first-child > div{
+    border-width: 0;
 }
 
 side-rank-item{
@@ -26,4 +27,58 @@ side-rank-item{
     flex-direction: column;
     flex-grow: 1;
     padding: 10px 10px;
+}
+
+.player-profile{
+    background-color: rgba(63,105,215,.3);
+}
+
+.player-profile > .player-stats{
+    display: block
+}
+
+.player-profile > .player-stats div{
+    width: 50%;
+    float: left;
+}
+
+.player-profile > .player-stats div span{
+    padding: 2px;
+    
+}
+
+.player-profile > .player-stats div span span{
+    font-size: 12px;    
+}
+
+.player-profile > .player-stats div span span:first-child{
+    font-weight: bold;
+    color: #04a704; 
+}
+
+
+
+.player-avatar{
+    display: flex;
+    padding: 5px 10px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: #999;
+    text-decoration: none;
+}
+
+.player-avatar img{
+    border-radius: 50%;
+    height: 30px;
+    margin-right: 5px;
+}
+.player-avatar span{
+    line-height: 2.5;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

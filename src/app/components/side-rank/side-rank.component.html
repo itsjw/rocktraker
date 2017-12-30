@@ -1,9 +1,53 @@
-<div class="side-items">    
-    <div class="row" *ngFor="let rank of ranksItems">
+<div class="side-items">   
+    <div>
+        <div class="player-profile">
+            <div class="player-avatar" >
+                <img  alt="Avatar" [src]="player.avatar">
+                <span >{{player.displayName}}</span>
+            </div>
+            <div class="player-stats" >
+                <div>
+                    <span>
+                        <span>Wins: </span>
+                        <span>{{player.stats.wins}}</span>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <span>MVPs: </span>
+                        <span>{{player.stats.mvps}}</span>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <span>Goals: </span>
+                        <span>{{player.stats.goals}}</span>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <span>Assits: </span>
+                        <span>{{player.stats.assists}}</span>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <span>Shots: </span>
+                        <span>{{player.stats.shots}}</span>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <span>Saves: </span>
+                        <span>{{player.stats.saves}}</span>
+                    </span>
+                </div>
+            </div>            
+        </div>
+    </div> 
+    <div *ngFor="let rank of player.rankedItems">
         <div>
             <side-rank-item [ranked] ="rank"></side-rank-item>
-        </div>
-            
-    </div>
-    
+        </div>            
+    </div>    
 </div>

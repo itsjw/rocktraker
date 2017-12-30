@@ -17,6 +17,9 @@ import { ElectronService } from './providers/electron.service';
 
 import { AppComponent } from './app.component';
 import { HomeModule } from 'app/components/home/home.module';
+import { HeaderModule } from 'app/components/header/header.module';
+import { AppSettingsService } from 'app/providers/app-settings.service';
+import { DataService } from 'app/providers/data.service';
 
 
 // AoT requires an exported function for factories
@@ -34,6 +37,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     AppRoutingModule,
     HomeModule,
+    HeaderModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -42,7 +46,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [ElectronService],
+  providers: [ElectronService,DataService, AppSettingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

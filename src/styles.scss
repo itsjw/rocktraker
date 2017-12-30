@@ -7,6 +7,67 @@ html, body{
   background-color: #29292b;
 }
 
+
+*{
+  user-select: none;
+  cursor: default;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.main-app{
+  height: 100%;
+  display: flex;
+  padding-right: 2px;
+  padding-left: 2px;
+  flex-direction: column;
+}
+
+top-bar{
+  display: flex;
+  flex-grow: 0;
+}
+
+side-rank{
+  display: -webkit-box;
+}
+.main-body{
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  padding-bottom: 2px;
+}
+
+
+
+
+.loader-container,.loader-sub-container{
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.loader-sub-container{
+  flex-direction: column;
+}
+
+.loader {
+  border: 8px solid #838386; 
+  border-top: 8px solid rgb(63,105,215);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 .divider {
   display: flex;
   flex-grow: 0;
@@ -17,14 +78,34 @@ html, body{
 
 
 .section-title{
-  padding: 10px;
   background: #212121;
   margin-left: -2px;
 }
 
-.section-title h4{
-  margin: 0;
+.section-title > div{
+  font-size: 18px;
+  float: left;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
 }
+
+.section-title-header-5{
+  width: 20%;
+  
+  
+}
+
+.section-title-header-5 > div{
+  padding: 10px 0;
+  border: groove #484846;
+  border-width: 0 0 0 2px;
+}
+
+.section-title-header-5:first-child > div{
+  border-width: 0;
+}
+
 
 *:not(.fa){
   color: #eee;

@@ -1,36 +1,32 @@
-<div class="main-app">
-  <top-bar></top-bar>
-  <div class="divider"></div>
-  <div class="main-body">
-    <div *ngIf="!loading">
-        <div class="main-options"></div>
-        <div class="divider"></div>
-        <div class="main-players">
-            <tab-players [players]="playerList" [playerSeleted]="playerSeleted" [seleted]="fnHandleSelectionPlayer"></tab-players>
-        </div>
-        <div class="divider"></div>
-        <div class="main-stats">
-            <div class="section-title">
-                <h4>Performace</h4>
-            </div>
-            <div>
-                <div></div>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="main-ranks">
-            <div class="section-title">
-                <h4>Playlist</h4>
-            </div>
-            <side-rank [ranksItems]="ranksItems"></side-rank>
-        </div>
-        <div class="divider"></div>
+<div>
+    <div class="main-options"></div>
+    <div class="divider"></div>
+    <!--<div class="main-players">
+        <tab-players [players]="playerList" [playerSeleted]="playerSeleted" [seleted]="fnHandleSelectionPlayer"></tab-players>
     </div>
-    <div *ngIf="loading" class="loader-container">
-        <div class="loader-sub-container">
-            <div class="loader"></div>
-        </div>        
+    <div class="divider"></div>
+    <!--<div class="main-stats">
+        <div class="section-title">
+            <h4>Performace</h4>
+        </div>
+        <div>
+            <div></div>
+        </div>
     </div>
-    
-  </div>
+    <div class="divider"></div>-->
+    <div class="main-ranks">
+        <div class="section-title">
+            <div class="section-title-header-5"><div><span>Players</span></div></div>
+            <div class="section-title-header-5"><div><span>Duel 1v1</span></div></div>
+            <div class="section-title-header-5"><div><span>Doubles 2v2</span></div></div>
+            <div class="section-title-header-5"><div><span>Solo Standard 3v3</span></div></div>
+            <div class="section-title-header-5"><div><span>Standard 3v3</span></div></div>
+        </div>
+        <div class="divider"></div>
+        <div *ngFor="let player of playerList">
+            <side-rank [player]="player"></side-rank>
+            <div class="divider"></div>
+        </div>
+        
+    </div>
 </div>
